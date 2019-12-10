@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Les Patriotes de Québec</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./index.css"  />
+    <link rel="icon" href="favicon.png">
+  </head>
+  <body>
+    <div class="container">
+      <img src="les_patriotes_de_quebec.png" class="logo">
+
+      <div class="section">
+        <h2>What</h2>
+        <p>Gaelic Sports Club in Québec City</p>
+      </div>
+
+      <div class="section">
+        <h2>Who</h2>
+        <p>Everyone is welcome, all ages, genders, and fitness levels</p>
+      </div>
+
+      <div class="section">
+        <h2>Where/When</h2>
+          <p><strong>Summer:</strong> <a href="https://www.google.com/maps/place/46%C2%B047'52.6%22N+71%C2%B013'44.3%22W/">Plains of Abraham</a>, Tuesdays@6pm<p>
+          <p><strong>Winter:</strong> <a href="https://goo.gl/maps/C2NKN8pptjMHsdM56">Stade Telus</a>, Friday@7pm<p>
+          <p><strong>After practice pint:</strong> <a href="https://www.pubgalway.com/">The Galway Pub</a><p>
+          <p>Send us a message on facebook to confirm the practice schedule and let us know you're coming</p>
+        </div>
+
+      <div class="section">
+        <h2>How</h2>
+        <p><a href="https://www.youtube.com/watch?v=vSOe-USZzok">basics of gaelic football</a> - It may look confusing, so come by practice and we'll show you!</p>
+      </div>
+
+      <div class="section">
+        <h2>Why</h2>
+        <p>for the love of sport, community</p>
+      </div>
+
+      <hr>
+
+      <div class="section">
+          <p>Our main platform is Facebook</p>
+          <p>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/PatriotesdeQuebecGAA/">Page</a></p>
+          <p>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/groups/GaeliqueQuebec/">Group</a></p>
+          <p>Or you can email us at <a href="mailto:contact@patriotesdequebec.com">contact@patriotesdequebec.com</a></p>
+      </div>
+
+      <!-- Facebook Chat -->
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v5.0'
+            });
+          };
+
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+          attribution=setup_tool
+          page_id="110425998974917"
+          theme_color="#0f53a1"
+          logged_in_greeting="Envoie-nous un message"
+          logged_out_greeting="Envoie-nous un message">
+        </div>
+      <!-- / Facebook Chat -->
+    </div>
+  </body>
+</html>
