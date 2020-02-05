@@ -2,16 +2,33 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Les Patriotes de Québec</title>
+    <title>Patriotes de Québec</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./index.css"  />
     <link rel="icon" href="favicon.png">
-  </head>
-  <body>
-    <div class="container">
-      <img src="les_patriotes_de_quebec.png" class="logo">
 
+    <!-- Hotjar Tracking Code for patriotesdequebec.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1675014,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </head>
+
+  <body>
+    <div class="relative-container">
+      <img src="les_patriotes_de_quebec.png" class="logo">
+      <script src="https://snapwidget.com/js/snapwidget.js"></script>
+      <iframe src="https://snapwidget.com/embed/772723" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+    </div>
+
+    <div class="container">
       <div class="section">
         <h2>What</h2>
         <p>Gaelic Sports Club in Québec City</p>
@@ -32,7 +49,7 @@
 
       <div class="section">
         <h2>Why</h2>
-        <p>for the love of sport, community</p>
+        <p>For the love of sport, community</p>
       </div>
 
       <div class="section">
@@ -44,39 +61,41 @@
         <p>&nbsp;-&nbsp;<a href="https://www.facebook.com/PatriotesdeQuebecGAA/">Facebook Page</a></p>
         <p>&nbsp;-&nbsp;<a href="https://www.facebook.com/groups/GaeliqueQuebec/">Facebook Group</a></p>
       </div>
-
-      <br>
-
-      <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/vSOe-USZzok?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <!-- Facebook Chat -->
-        <div id="fb-root"></div>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              xfbml            : true,
-              version          : 'v5.0'
-            });
-          };
-
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-        </script>
-
-        <!-- Your customer chat code -->
-        <div class="fb-customerchat"
-          attribution=setup_tool
-          page_id="110425998974917"
-          theme_color="#0f53a1"
-          logged_in_greeting="Envoie-nous un message"
-          logged_out_greeting="Envoie-nous un message">
-        </div>
-      <!-- / Facebook Chat -->
     </div>
+  </div>
+
+  <br>
+  <div class="video-wrapper">
+    <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/vSOe-USZzok?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+    <!-- Facebook Chat -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="110425998974917"
+        theme_color="#0f53a1"
+        logged_in_greeting="Envoie-nous un message"
+        logged_out_greeting="Envoie-nous un message">
+      </div>
+    <!-- / Facebook Chat -->
   </body>
 </html>
