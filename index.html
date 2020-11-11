@@ -114,23 +114,8 @@
 
     <!-- Facebook Chat -->
       <div id="fb-root"></div>
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="110425998974917"
-        theme_color="#0f53a1"
-        logged_in_greeting="Envoie-nous un message"
-        logged_out_greeting="Envoie-nous un message">
-      </div>
-      <script>
-        // English language greeting override
-        const lang = navigator.language.slice(0,2);
-        var chatEl = document.getElementsByClassName('fb-customerchat')[0];
-        if (navigator.language.slice(0,2) === "en") {
-          chatEl.setAttribute("logged_in_greeting", "Send us a message");
-          chatEl.setAttribute("logged_out_greeting", "Send us a message");
-        }
 
+      <script>
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
@@ -149,6 +134,25 @@
           }
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="110425998974917"
+        theme_color="#0f53a1"
+        logged_in_greeting="Envoie-nous un message"
+        logged_out_greeting="Envoie-nous un message">
+      </div>
+
+      <!-- English language greeting override -->
+      <script type="text/javascript">
+        const lang = navigator.language.slice(0,2);
+        var chatEl = document.getElementsByClassName('fb-customerchat')[0];
+        if (navigator.language.slice(0,2) === "en") {
+          chatEl.setAttribute("logged_in_greeting", "Send us a message");
+          chatEl.setAttribute("logged_out_greeting", "Send us a message");
+        }
       </script>
     <!-- / Facebook Chat -->
   </body>
