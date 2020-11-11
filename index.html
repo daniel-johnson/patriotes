@@ -2,7 +2,9 @@
 <html dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta property="og:locale" content="fr">
+    <meta property="og:locale:alternate" content="en">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159306202-1"></script>
@@ -32,6 +34,10 @@
       </div>
 
       <div class="container fr">
+        <div class="section language-section">
+          <a href="#" class="language">english</a>
+        </div>
+
         <div class="section">
           <h2>Quoi</h2>
           <p>Club sportif gaélique à Québec</p>
@@ -57,7 +63,7 @@
 
         <div class="section">
           <h2>Comment</h2>
-          <p><a href="https://www.isscvancouver.com/gaelic-football-rules/" target="_blank">Les bases du football gaélique</a> - cela peut sembler déroutant, alors venez vous entraîner et nous vous montrerons!</p>
+          <p><a href="http://www.nantesgaa.org/regles" target="_blank">Les bases du football gaélique</a> - cela peut sembler déroutant, alors venez vous entraîner et nous vous montrerons!</p>
         </div>
 
         <div class="section">
@@ -67,6 +73,10 @@
       </div>
 
       <div class="container en">
+        <div class="section language-section">
+          <a href="#" class="language">français</a>
+        </div>
+
         <div class="section">
           <h2>What</h2>
           <p>Gaelic Sports Club in Québec City</p>
@@ -92,7 +102,8 @@
 
         <div class="section">
           <h2>How</h2>
-          <p><a href="https://www.isscvancouver.com/gaelic-football-rules/" target="_blank">The basics of gaelic football</a> - It may seem confusing, so come by practice and we'll show you!</p>
+          <p>Watch the video below</p>
+          <p>It may seem confusing, so come by practice and we'll show you!</p>
         </div>
 
         <div class="section">
@@ -110,6 +121,14 @@
     <!-- Language Scripting -->
     <script type="text/javascript">
       document.getElementById('root').classList.add(navigator.language.slice(0,2));
+      Array.from(document.getElementsByClassName("language")).forEach((el) => {
+        el.onclick = function(){
+          let root = document.getElementById('root');
+          root.classList.toggle("en");
+          root.classList.toggle("fr");
+          event.preventDefault();
+        }
+      });
     </script>
 
     <!-- Facebook Chat -->
