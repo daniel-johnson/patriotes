@@ -48,6 +48,9 @@ body.en > .body > .container.en  {
   margin: auto;
   width: 100%;
   overflow-x: scroll;
+
+  display: flex;
+  justify-content: center;
 }
 
 .snapwidget-widget-container iframe {
