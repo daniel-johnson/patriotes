@@ -97,6 +97,7 @@ strong {
   position: relative;
   width:100%;
   max-width: 560px;
+  margin-top: 30px;
 }
 
 .video-wrapper::after {
