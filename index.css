@@ -40,7 +40,7 @@ body.en > .body > .container.en  {
   position: relative;
 }
 
-.snapwidget-widget {
+.snapwidget-widget-container {
   position: absolute;
   top: -5px;
   left: 0;

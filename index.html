@@ -25,9 +25,9 @@
 
       <div class="relative-container">
         <img src="les_patriotes_de_quebec.png" class="logo">
-        <div class="snapwidget-widget">
+        <div class="snapwidget-widget-container">
           <script src="https://snapwidget.com/js/snapwidget.js"></script>
-          <iframe src="https://snapwidget.com/embed/772723" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+          <iframe src="https://snapwidget.com/embed/772723" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
         </div>
       </div>
 
@@ -115,6 +115,14 @@
     <!-- Facebook Chat -->
       <div id="fb-root"></div>
       <script>
+        // English language greeting override
+        const lang = navigator.language.slice(0,2);
+        var chatEl = document.getElementsByClassName('fb-customerchat')[0];
+        if (lang === "en") {
+          chatEl.setAttribute("logged_in_greeting", "Send us a message");
+          chatEl.setAttribute("logged_out_greeting", "Send us a message");
+        }
+
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
@@ -126,7 +134,11 @@
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+          if (lang === "en") {
+            js.src = 'https://connect.facebook.net/en_CA/sdk/xfbml.customerchat.js';
+          } else {
+            js.src = 'https://connect.facebook.net/fr_CA/sdk/xfbml.customerchat.js';
+          }
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
       </script>
