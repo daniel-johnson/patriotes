@@ -47,13 +47,13 @@ body.en > .body > .container.en  {
   right: 0;
   margin: auto;
   width: 100%;
-  max-width: 1650px;
   overflow-x: scroll;
 }
 
-.snapwidget-widget iframe {
+.snapwidget-widget-container iframe {
   height: -webkit-fill-available;
   min-width: 1160px;
+  max-width: 1650px;
 }
 
 .logo {
