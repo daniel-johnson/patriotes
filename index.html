@@ -114,11 +114,19 @@
 
     <!-- Facebook Chat -->
       <div id="fb-root"></div>
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="110425998974917"
+        theme_color="#0f53a1"
+        logged_in_greeting="Envoie-nous un message"
+        logged_out_greeting="Envoie-nous un message">
+      </div>
       <script>
         // English language greeting override
         const lang = navigator.language.slice(0,2);
         var chatEl = document.getElementsByClassName('fb-customerchat')[0];
-        if (lang === "en") {
+        if (navigator.language.slice(0,2) === "en") {
           chatEl.setAttribute("logged_in_greeting", "Send us a message");
           chatEl.setAttribute("logged_out_greeting", "Send us a message");
         }
@@ -134,7 +142,7 @@
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          if (lang === "en") {
+          if (navigator.language.slice(0,2) === "en") {
             js.src = 'https://connect.facebook.net/en_CA/sdk/xfbml.customerchat.js';
           } else {
             js.src = 'https://connect.facebook.net/fr_CA/sdk/xfbml.customerchat.js';
@@ -142,15 +150,6 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
       </script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="110425998974917"
-        theme_color="#0f53a1"
-        logged_in_greeting="Envoie-nous un message"
-        logged_out_greeting="Envoie-nous un message">
-      </div>
     <!-- / Facebook Chat -->
   </body>
 </html>
